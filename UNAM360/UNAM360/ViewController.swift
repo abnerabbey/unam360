@@ -8,12 +8,16 @@
 
 import UIKit
 import MapKit
+import ARKit
+import SceneKit
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var mapView: UIView!
+    @IBOutlet weak var arView: UIView!
     
     let map = MKMapView()
+    let arScene = ARSCNView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +30,18 @@ class ViewController: UIViewController {
         map.frame = mapView.bounds
         mapView.addSubview(map)
         
+        setupARConfiguration()
+        
+        arScene.frame = arView.bounds
+        arView.addSubview(arScene)
+        
+        
+    }
+    
+    func setupARConfiguration(){
+        let configuration = ARWorldTrackingConfiguration()
+        
+        arScene.session.run(configuration)
     }
 
 
