@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 import ARKit
 import SceneKit
+import CoreMotion
 
 class ViewController: UIViewController {
     
@@ -19,8 +20,18 @@ class ViewController: UIViewController {
     let map = MKMapView()
     let arScene = ARSCNView()
     
+    let motionManager = CMMotionManager()
+    
+    var devicePosition: DevicePosition = .horizontal {
+        willSet {
+            deviceWillChangeOrientationTo(newValue)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        startGatheringAccelerometerData()
         // Do any additional setup after loading the view.
     }
     
@@ -43,7 +54,37 @@ class ViewController: UIViewController {
         
         arScene.session.run(configuration)
     }
-
+    
+    func startGatheringAccelerometerData(){
+        motionManager.accelerometerUpdateInterval = 0.05
+        
+        motionManager.startAccelerometerUpdates(to: OperationQueue.current!) {
+            [unowned self]
+            (data, error) in
+            if let accelerometerData = data {
+                let angle = abs(accelerationIntoDegrees(accelerometerData.acceleration.y, accelerometerData.acceleration.z))
+                
+                if angle < 150 {
+                    self.devicePosition = .vertical
+                }
+                else {
+                    self.devicePosition = .horizontal
+                }
+            }
+        }
+    }
+    
+    func deviceWillChangeOrientationTo(_ orientation: DevicePosition) {
+        if orientation == .vertical {
+            self.arScene.isHidden = false
+            setupARConfiguration()
+        }
+        else{
+            self.arScene.isHidden = true
+            self.view.sendSubviewToBack(arScene)
+        }
+        
+    }
 
 }
 
