@@ -20,6 +20,12 @@ class ViewController: UIViewController {
     let map = MKMapView()
     let arScene = ARSCNView()
     
+    let points: [Points] = {
+        let data = loadDataFromFile(named: "pointsData", inFormat: "json")!
+        let points = try! JSONDecoder().decode([Points].self, from: data)
+        return points
+    }()
+    
     let motionManager = CMMotionManager()
     
     var devicePosition: DevicePosition = .horizontal {
@@ -30,7 +36,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         startGatheringAccelerometerData()
         // Do any additional setup after loading the view.
     }
