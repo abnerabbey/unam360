@@ -14,6 +14,10 @@
 		21A0256A2272846C006E75A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A025682272846C006E75A5 /* LaunchScreen.storyboard */; };
 		21A025752272846C006E75A5 /* UNAM360Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A025742272846C006E75A5 /* UNAM360Tests.swift */; };
 		21A025802272846D006E75A5 /* UNAM360UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A0257F2272846D006E75A5 /* UNAM360UITests.swift */; };
+		73C1627D227BC46D00B85EBA /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C1627C227BC46D00B85EBA /* Utils.swift */; };
+		73C16281227BC47F00B85EBA /* Points.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C1627F227BC47F00B85EBA /* Points.swift */; };
+		73C16282227BC47F00B85EBA /* DevicePositions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C16280227BC47F00B85EBA /* DevicePositions.swift */; };
+		73C16284227BC48800B85EBA /* pointsData.json in Resources */ = {isa = PBXBuildFile; fileRef = 73C16283227BC48800B85EBA /* pointsData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		21A0257B2272846C006E75A5 /* UNAM360UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UNAM360UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21A0257F2272846D006E75A5 /* UNAM360UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNAM360UITests.swift; sourceTree = "<group>"; };
 		21A025812272846D006E75A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73C1627C227BC46D00B85EBA /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		73C1627F227BC47F00B85EBA /* Points.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Points.swift; sourceTree = "<group>"; };
+		73C16280227BC47F00B85EBA /* DevicePositions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicePositions.swift; sourceTree = "<group>"; };
+		73C16283227BC48800B85EBA /* pointsData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pointsData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +105,10 @@
 		21A0255E22728460006E75A5 /* UNAM360 */ = {
 			isa = PBXGroup;
 			children = (
+				73C1627E227BC47F00B85EBA /* Models */,
+				73C1627B227BC46D00B85EBA /* Helper Functions */,
 				21A0255F22728460006E75A5 /* AppDelegate.swift */,
+				73C16283227BC48800B85EBA /* pointsData.json */,
 				21A0256122728460006E75A5 /* ViewController.swift */,
 				21A0256322728460006E75A5 /* Main.storyboard */,
 				21A025662272846C006E75A5 /* Assets.xcassets */,
@@ -123,6 +134,23 @@
 				21A025812272846D006E75A5 /* Info.plist */,
 			);
 			path = UNAM360UITests;
+			sourceTree = "<group>";
+		};
+		73C1627B227BC46D00B85EBA /* Helper Functions */ = {
+			isa = PBXGroup;
+			children = (
+				73C1627C227BC46D00B85EBA /* Utils.swift */,
+			);
+			path = "Helper Functions";
+			sourceTree = "<group>";
+		};
+		73C1627E227BC47F00B85EBA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				73C1627F227BC47F00B85EBA /* Points.swift */,
+				73C16280227BC47F00B85EBA /* DevicePositions.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +259,7 @@
 			files = (
 				21A0256A2272846C006E75A5 /* LaunchScreen.storyboard in Resources */,
 				21A025672272846C006E75A5 /* Assets.xcassets in Resources */,
+				73C16284227BC48800B85EBA /* pointsData.json in Resources */,
 				21A0256522728460006E75A5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,8 +285,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73C16281227BC47F00B85EBA /* Points.swift in Sources */,
+				73C16282227BC47F00B85EBA /* DevicePositions.swift in Sources */,
 				21A0256222728460006E75A5 /* ViewController.swift in Sources */,
 				21A0256022728460006E75A5 /* AppDelegate.swift in Sources */,
+				73C1627D227BC46D00B85EBA /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,13 +467,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 32M7976Q92;
 				INFOPLIST_FILE = UNAM360/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ioslab.ingenieria.UNAM360;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -453,13 +486,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 32M7976Q92;
 				INFOPLIST_FILE = UNAM360/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ioslab.ingenieria.UNAM360;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
