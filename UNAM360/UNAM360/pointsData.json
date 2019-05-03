@@ -7,10 +7,10 @@
         },
         "image": "bibliotecaCentral",
         "placeType": "Biblioteca",
-        "pumabus": "Rectoria"
+        "pumabus": "Rectoría"
     },
     {
-        "name": "IOS Lab Facultad de Ingenieria",
+        "name": "iOS development lab Facultad de Ingeniería",
         "location": {
             "latitude": 19.327494,
             "longitude": -99.182304
@@ -20,27 +20,27 @@
         "pumabus": "Anexo de Ingenieria"
     },
     {
-        "name": "Rectoria",
+        "name": "Rectoría",
         "location": {
             "latitude": 19.332142,
             "longitude": -99.188130
         },
         "image": "rectoria",
         "placeType": "Oficionas",
-        "pumabus": "Rectoria"
+        "pumabus": "Rectoría"
     },
     {
-        "name": "Divicion de Ciencias Basicas Facultad de Ingenieria",
+        "name": "División de Ciencias Básicas Facultad de Ingeniería",
         "location": {
             "latitude": 19.326329,
             "longitude": -99.182233
         },
         "image": "AnexFi",
         "placeType": "Escuela o Facultad",
-        "pumabus": "Anexo de Ingenieria"
+        "pumabus": "Anexo de Ingeniería"
     },
     {
-        "name": "Alberca Olimpica",
+        "name": "Alberca Olímpica",
         "location": {
             "latitude": 19.330601,
             "longitude": -99.184958
@@ -50,7 +50,7 @@
         "pumabus": "Alberca Olímpica"
     },
     {
-        "name": "Estadio Olimpico Universitario",
+        "name": "Estadio Olímpico Universitario",
         "location": {
             "latitude": 19.332028,
             "longitude": -99.191878
@@ -67,17 +67,17 @@
         },
         "image": "AuditorioJavierBarrosSierra",
         "placeType": "Auditorio",
-        "pumabus": "Ingenieria"
+        "pumabus": "Ingeniería"
     },
     {
-        "name": "Facultad de Ingenieria",
+        "name": "Facultad de Ingeniería",
         "location": {
             "latitude": 19.331693,
             "longitude": -99.184775
         },
         "image": "FacultadIngenieria",
         "placeType": "Escuela o Facultad",
-        "pumabus": "Ingenieria"
+        "pumabus": "Ingeniería"
     },
     {
         "name": "Facultad de Filosofía y Letras",
