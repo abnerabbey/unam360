@@ -14,7 +14,6 @@ extension ViewController: AccelerometerProtocol {
         }
         else{
             self.arScene.isHidden = true
-            self.view.sendSubviewToBack(arScene)
         }
     }
 

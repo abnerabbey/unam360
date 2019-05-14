@@ -17,30 +17,9 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BbS-Q2-9s3" userLabel="arView">
-                                <rect key="frame" x="20" y="229" width="374" height="447"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yIm-Fn-mPx" userLabel="mapView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="yIm-Fn-mPx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="50T-rO-Wal"/>
-                            <constraint firstAttribute="trailing" secondItem="yIm-Fn-mPx" secondAttribute="trailing" id="H0e-UJ-7MI"/>
-                            <constraint firstItem="yIm-Fn-mPx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Oiz-An-vfV"/>
-                            <constraint firstAttribute="bottom" secondItem="yIm-Fn-mPx" secondAttribute="bottom" id="Wma-5j-SyJ"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="arView" destination="yIm-Fn-mPx" id="9ad-9Y-ngR"/>
-                        <outlet property="mapView" destination="yIm-Fn-mPx" id="XxD-HG-H7S"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
