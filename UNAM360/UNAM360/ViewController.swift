@@ -13,35 +13,26 @@ import SceneKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var mapView: UIView!
-    @IBOutlet weak var arView: UIView!
-    
-    let map = MKMapView()
+    let mapView = MKMapView()
     let arScene = ARSCNView()
 
     let accelerometerHandler = AccelerometerHandler()
     
-    let points: [Points] = {
-        let data = loadDataFromFile(named: "pointsData", inFormat: "json")!
-        let points = try! JSONDecoder().decode([Points].self, from: data)
-        return points
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         accelerometerHandler.delegate = self
+        //adjust maps
+        mapView.frame = self.view.bounds
+        mapView.delegate = self
+        self.view.addSubview(mapView)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        map.frame = mapView.bounds
-        mapView.addSubview(map)
-        
         setupARConfiguration()
         
-        arScene.frame = arView.bounds
-        arView.addSubview(arScene)
+        arScene.frame = self.view.bounds
+        self.view.addSubview(arScene)
     }
     
     func setupARConfiguration(){

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21379CDD228A48E900023FAB /* MainViewController+MapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21379CDC228A48E900023FAB /* MainViewController+MapViewDelegate.swift */; };
 		21A0256022728460006E75A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A0255F22728460006E75A5 /* AppDelegate.swift */; };
 		21A0256222728460006E75A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A0256122728460006E75A5 /* ViewController.swift */; };
 		21A0256522728460006E75A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A0256322728460006E75A5 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		21379CDC228A48E900023FAB /* MainViewController+MapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+MapViewDelegate.swift"; sourceTree = "<group>"; };
 		21A0255C22728460006E75A5 /* UNAM360.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UNAM360.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21A0255F22728460006E75A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21A0256122728460006E75A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21379CDB228A487700023FAB /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				21379CDC228A48E900023FAB /* MainViewController+MapViewDelegate.swift */,
+			);
+			path = Maps;
+			sourceTree = "<group>";
+		};
 		21A0255322728460006E75A5 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +130,7 @@
 				21A025662272846C006E75A5 /* Assets.xcassets */,
 				21A025682272846C006E75A5 /* LaunchScreen.storyboard */,
 				21A0256B2272846C006E75A5 /* Info.plist */,
+				21379CDB228A487700023FAB /* Maps */,
 				DA95956971260EB0B94F1A10 /* Accelerometer */,
 				DA9592379431B36E8FB29975 /* MainViewController+AccelerometerHandlerDelegate.swift */,
 			);
@@ -309,6 +320,7 @@
 				73C1627D227BC46D00B85EBA /* Utils.swift in Sources */,
 				DA959E35E4BADD1AADA02348 /* AccelerometerHandler.swift in Sources */,
 				DA959CF5759A022263E7C9DA /* AccelerometerProtocol.swift in Sources */,
+				21379CDD228A48E900023FAB /* MainViewController+MapViewDelegate.swift in Sources */,
 				DA959593190DBF7438DA8E31 /* MainViewController+AccelerometerHandlerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
